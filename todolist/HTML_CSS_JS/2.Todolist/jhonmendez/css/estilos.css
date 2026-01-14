@@ -1,0 +1,159 @@
+/*estilos*/
+
+:root {
+  --color-p: #607466;
+  --color-s: #000000;
+  --color-t: #AEDCC0;
+  --color-b: #EFEFEF;
+  --color-c: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background-color: var(--color-b);
+}
+
+#container {
+  background-color: rgb(176, 167, 36a);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-c);
+  border-radius: 7px;
+  padding: 30px;
+  box-shadow: 0px 1px 3px #000;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 5px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0px 0px 1px var(--color-s);
+}
+
+.input-section button {
+  border: none;
+  margin-left: 10px;
+  box-shadow: 0px 0px 1px var(--color-s);
+  background-color: var(--color-t);
+}
+
+#header-task {
+  margin: 15px 0
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*continuacion ejercicio*/
+
+#task-list {
+  display: flex;
+  /* flex */
+  flex-direction: column;
+  /* orden vertical */
+  margin-bottom: 12px;
+  /* margen inferior */
+  list-style: none;
+  /* quitar la decoracion de la lista */
+  padding: 0;
+  /* quitar el padding */
+  gap: 12px;
+  /* gap(espacio) entre los elementos */
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  /* orden horizontal */
+  align-items: center;
+  /* alineacion vertical */
+  padding: 12px;
+  /*relleno de elementos */
+  background-color: var(--color-b);
+  border-radius: 5px;
+  /*redondeo de los bordes*/
+}
+
+/*hover de la lista: permite que el elemento se mueva con el mouse*/
+#task-list li:hover {
+  background-color: var(--color-t);
+  /*color de fondo*/
+}
+
+#task-list li input {
+  margin-right: 12px;
+  /*margen derecho*/
+}
+
+#task-list li .task-title {
+  font-size: 16px;
+  /* tama;o de fuente*/
+  font-weight: 500;
+  /* grosor de la fuente*/
+  color: var(--color-s);
+  /* color de la fuente*/
+  text-decoration: none;
+  /* quitar la decoracion de la fuente*/
+  transition: all 0.3s ease;
+  /* transicion de la fuente*/
+  padding: 0 5px;
+}
+
+#task-list li .task-delete {
+  cursor: pointer;
+  /*permite que el elemento se mueva con el mouse*/
+  color: var(--color-p);
+  /*color de la fuente*/
+}
+
+/*hover de la lista: permite que el elemento se mueva con el mouse sobre el icono de eliinar*/
+#task-list li .task-delete:hover {
+  color: var(--color-s);
+  /*color de la fuente*/
+}
+
+/* botones hijos del footer, parte inferior*/
+.footer button {
+  border: none;
+  /*quitar el color de la linea por defecto de un boton*/
+  background: none;
+  /*quitar el color de fondo por defecto de un boton*/
+  cursor: pointer;
+  /*permite que el elemento se mueva con el mouse*/
+}
+
+/*hover de los botones del footer*/
+.footer button:hover {
+  color: var(--color-t);
+  /*color de la fuente*/
+}
+
+.footer span {
+  color: var(--color-p);
+  /*color de la fuente*/
+  font-size: 20px;
+  /* tama;o de fuente*/
+  font-weight: bold;
+  /* grosor de la fuente*/
+}

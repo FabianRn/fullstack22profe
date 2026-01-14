@@ -1,0 +1,44 @@
+/*
+expresion de css:
+   propiedad: valor
+
+selector: seleccionar un elemento de html
+
+como se selecciona? en cascada
+body h1
+*/
+
+body{
+  font-size: 15px;
+  margin: 10px;
+}
+
+#contenedor{
+  background-color: azure;
+  border: 1px solid;
+  padding: 30px;
+  margin: 10px;
+  width: 100%;
+}
+
+#tituloId{
+ color:brown;
+ margin-left: 50px;
+ top: 10px;
+ text-align: center;
+ font-size: 2rem;
+ margin: 2em;
+}
+
+
+.tituloClase{
+ color: #dfb646
+}
+
+.fondoAzul{
+  background-color: rgba(0, 0, 255, 0.168);
+}
+
+img{
+  max-width: 500px;
+}
