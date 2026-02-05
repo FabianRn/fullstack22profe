@@ -1,0 +1,32 @@
+/*
+C-insert
+R-find
+U-update
+D-delete
+*/
+
+/*crear coleccion e insertar un documento*/
+db.tasks.insertOne({
+  title: "tarea1",
+  description: "desc1",
+});
+db.status.insertMany([
+  { name: "Pendiente" },
+  { name: "Cancelada" },
+  { name: "Eliminada" },
+  { name: "Finalizada" },
+]);
+
+/*buscar uno o varios documentos*/
+db.status.find();
+db.status.find({ name: "Cancelada" });
+
+/*actualizar un documento*/
+db.tasks.find({ _id: ObjectId("6983fcdc3af1c554de8926e3") });
+db.tasks.updateOne(
+  { _id: ObjectId("6983fcdc3af1c554de8926e3") },
+  { $set: { fecha: "2025/01/01" } },
+);
+
+/*eliminar*/
+db.tasks.deleteOne({ _id: ObjectId("6983fcdc3af1c554de8926e3") });
