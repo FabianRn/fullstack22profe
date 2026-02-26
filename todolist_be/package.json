@@ -1,0 +1,23 @@
+{
+  "name": "todolist_be",
+  "version": "1.0.0",
+  "description": "Proyecto de backend todolist",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: a'un no hay pruebas\" && exit 1"
+  },
+  "keywords": [
+    "NODEJS",
+    "JS",
+    "ARQ CAPAS"
+  ],
+  "author": "Jhon Mendez",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
