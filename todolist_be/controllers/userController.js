@@ -45,10 +45,22 @@ const deleteUser = async (req, res) => {
   res.json(data);
 };
 
+const login = async (req, res) => {
+  let body = req.body;
+  let data = await userService.login(body);
+  if (data == null) {
+    res
+      .status(403)
+      .json({ message: "Usuario o contrase;a incorrecto", data: data });
+  }
+  res.json(data);
+};
+
 export default {
   listUser,
   listUserById,
   createUser,
   updateUser,
   deleteUser,
+  login,
 };

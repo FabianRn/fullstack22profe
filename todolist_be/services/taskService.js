@@ -33,11 +33,15 @@ const updateTask = async (id, body) => {
   return data;
 };
 
-const deleteTask = (id) => {
-  let data = prisma.task.delete({
-    where: { id: id },
-  });
-  return data;
+const deleteTask = async (id) => {
+  try {
+    let data = await prisma.task.delete({
+      where: { id: id },
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default {
