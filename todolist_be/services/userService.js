@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { hash } from "node:crypto";
 
 const prisma = new PrismaClient();
 
@@ -39,6 +40,15 @@ const deleteUser = (id) => {
     where: { id: id },
   });
   return data;
+};
+
+const hashPassword = async (passwordBody) => {
+  let hash = await bycript.hash(passwordBody, "10");
+  return hash;
+};
+
+const comparePassword = (passwordBody, passwordDB) => {
+  return true;
 };
 
 export default {
