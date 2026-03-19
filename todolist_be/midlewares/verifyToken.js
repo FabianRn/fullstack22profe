@@ -1,0 +1,20 @@
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+
+const validateToken = (req, res, next) => {
+  const authHeader = req.headers["authorization"];
+  if (!authHeader) {
+    return res.status(401).json({ message: "token no proporcionado" });
+  }
+  const token = authHeader.split(" ")[1];
+  // invalid token - synchronous
+  try {
+    jwt.verify(token, process.env.SECRET_KEY);
+    next();
+  } catch (err) {
+    return res.status(403).json({ message: "Usuario no autorizado" });
+  }
+};
+
+export default validateToken;

@@ -14,17 +14,11 @@ const listUserById = async (id) => {
     let data = await prisma.user.findUnique({
       where: { id: id },
     });
+    data.password = "";
     return data;
   } catch (error) {
     return 0;
   }
-};
-
-const createUser = async (body) => {
-  let data = await prisma.user.create({
-    data: body,
-  });
-  return data;
 };
 
 const updateUser = async (id, body) => {
@@ -57,4 +51,5 @@ export default {
   createUser,
   updateUser,
   deleteUser,
+  login,
 };
